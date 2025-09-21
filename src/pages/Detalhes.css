@@ -1,0 +1,125 @@
+.det-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.det-back {
+  background: none;
+  border: none;
+  color: #0a66c2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.det-title {
+  text-transform: capitalize;
+  margin: 0 0 1rem 0;
+}
+
+.det-loading,
+.det-empty {
+  text-align: center;
+  margin-top: 2rem;
+  opacity: 0.8;
+}
+
+.det-hero {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: linear-gradient(135deg, #f0f9ff, #d0ecff);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  margin-bottom: 1rem;
+}
+
+.det-hero img {
+  width: 80px;
+  height: 80px;
+}
+
+.det-temp-main {
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.det-temp-range {
+  color: #333;
+  margin-top: 0.25rem;
+}
+
+.det-cond {
+  color: #555;
+  margin-top: 0.25rem;
+  text-transform: capitalize;
+}
+
+.det-metrics {
+  display: grid;
+  gap: 12px;
+  width: 100%;
+  margin-top: 12px;
+}
+
+@media (max-width: 767px) {
+  .det-metrics {
+    grid-template-columns: 1fr 1fr;
+  }
+  .det-metrics .metrics-row {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+}
+
+@media (min-width: 768px) {
+  .det-metrics {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .det-metrics .metrics-row {
+    display: contents;
+  }
+  .det-container {
+    margin: 5rem;
+  }
+}
+
+.det-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 0.9rem 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+  .det-card p {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .det-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.3rem;
+    font-size: 0.9rem;
+  }
+
+  .det-card strong {
+    font-size: 1rem;
+  }
+}

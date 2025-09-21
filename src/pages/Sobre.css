@@ -1,0 +1,139 @@
+:root {
+  --radius: 18px;
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --card-border: rgba(0, 0, 0, 0.08);
+  --shadow-sm: 0 6px 16px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 22px rgba(0, 0, 0, 0.12);
+  --text-1: #0f172a;
+  --text-2: #475569;
+  --brand: #0a66c2;
+}
+
+.about {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: clamp(16px, 2vw, 28px);
+}
+
+.about h1 {
+  margin: 8px 0 4px;
+  font-size: clamp(1.6rem, 2.2vw, 2.2rem);
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  color: var(--text-1);
+}
+
+.lead {
+  color: var(--text-2);
+  line-height: 1.6;
+  margin-bottom: 18px;
+  max-width: 72ch;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: clamp(16px, 2vw, 22px);
+}
+
+.card h2,
+.card h3 {
+  margin: 0 0 8px;
+  color: var(--text-1);
+  letter-spacing: 0.2px;
+}
+
+.card p {
+  color: var(--text-2);
+}
+
+.grid {
+  display: grid;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.card + .card {
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card + .card {
+    margin-bottom: 0rem;
+  }
+
+  .card {
+    margin: 1rem;
+    max-height: 13rem;
+  }
+}
+
+.card ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.card ul li {
+  position: relative;
+  padding-left: 18px;
+  margin: 6px 0;
+  color: var(--text-2);
+}
+
+.card ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: radial-gradient(
+    circle at 30% 30%,
+    #fff 0 30%,
+    var(--brand) 31% 100%
+  );
+  box-shadow: 0 0 0 2px rgba(10, 102, 194, 0.15);
+}
+
+.card ol {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--text-2);
+}
+.card ol li {
+  margin: 0.35rem 0;
+}
+
+.about .card:first-of-type {
+  box-shadow: var(--shadow-lg);
+}
+
+.muted {
+  margin-top: 18px;
+  color: var(--text-2);
+  opacity: 0.7;
+  font-size: 0.92rem;
+  text-align: left;
+}
+
+.card {
+  animation: pop 0.25s ease-out both;
+}
+@keyframes pop {
+  from {
+    transform: translateY(6px);
+    opacity: 0.85;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

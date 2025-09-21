@@ -1,0 +1,34 @@
+.metrics-row {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+  width: 90%;
+}
+
+.metrics-row .stat-item {
+  flex: 1;
+  justify-content: center;
+}
+
+.stat-item.wind .stat-icon {
+  color: #0ea5e9;
+}
+.stat-item.humidity .stat-icon {
+  color: #8b5cf6;
+}
+.stat-item.sunrise .stat-icon {
+  color: #f59e0b;
+}
+.stat-item.sunset .stat-icon {
+  color: #6366f1;
+}
+
+@media (max-width: 767px) {
+  .metrics-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+}

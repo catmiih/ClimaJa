@@ -1,0 +1,26 @@
+.stat-item {
+  background: #fff;
+  border-radius: 12px;
+  padding: 0.7rem 1.3rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.95rem;
+}
+.stat-icon {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+.stat-label {
+  color: #666;
+}
+.stat-value {
+  color: #111;
+}
+
+@media (max-width: 767px) {
+  .stat-label {
+    display: none;
+  }
+}

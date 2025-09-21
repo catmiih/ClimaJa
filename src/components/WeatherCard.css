@@ -1,0 +1,133 @@
+:root {
+  --card-w: 200px;
+}
+
+.weather-card {
+  width: var(--card-w);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #f0f9ff, #d0ecff);
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 0.8rem 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 767px) {
+  .weather-card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.weather-card:hover {
+  transform: scale(1.01);
+}
+
+.weekday {
+  font-weight: 600;
+  color: #333;
+  text-transform: capitalize;
+  font-size: 0.95rem;
+}
+
+.weather-date {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.temp {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin-left: 0.5rem;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  max-width: 30%;
+  padding: 0.5rem;
+}
+
+.sun-times {
+  font-size: 0.8rem;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 0.2rem;
+}
+
+/* Responsivo para desktop */
+@media (min-width: 768px) {
+  .weather-card {
+    background: linear-gradient(135deg, #f0f9ff, #d0ecff);
+    border-radius: 16px;
+    padding: 1.2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    width: 180px;
+    height: 260px;
+    flex-shrink: 0; /* mantém tamanho fixo mesmo em scroll */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.2s ease;
+  }
+
+  .center img {
+    width: 5rem;
+    height: 5rem;
+    margin: 10% 5%;
+  }
+
+  .center {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .weather-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  }
+
+  .weekday {
+    font-weight: 600;
+    color: #333;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .weather-date {
+    font-size: 0.85rem;
+    color: #666;
+    text-align: center;
+  }
+
+  .icon-large {
+    width: 100%;
+    /* height: 3rem; */
+    margin: 0.5rem 0;
+  }
+
+  .temp {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1a1a1a;
+  }
+
+  .sun-times {
+    font-size: 0.75rem;
+    color: #444;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-top: 0.3rem;
+  }
+}
