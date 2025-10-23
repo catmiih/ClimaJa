@@ -1,2 +1,0 @@
-# ClimaJa
-Created with CodeSandbox
