@@ -1,65 +1,50 @@
-# 🌦️ ClimaJá+
+# 🌤️ ClimaJá - Real-time Weather Forecast
 
-Aplicação web **Mobile-First** para consulta de clima e previsão de 5 dias, desenvolvida com **React + Vite** e integração a uma API pública de meteorologia.
+<div align="center">
+  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
+  <img src="https://img.shields.io/badge/API-OpenWeather-orange?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Style-Styled--Components-db7093?style=for-the-badge" />
+</div>
 
-Foco em **responsividade**, **acessibilidade** e **componentes reutilizáveis**.
+## 📌 Project Overview
+ClimaJá is a modern web application that provides real-time weather data for cities worldwide. This project focuses on **asynchronous API consumption**, state management, and providing a clean, responsive user experience.
 
----
+## 🚀 Key Technical Features
+- **External API Integration:** Seamlessly consumes data from the **OpenWeatherMap API** using `fetch`/`axios` with robust error handling for invalid city names or network issues.
+- **Dynamic UI/UX:** The interface updates instantly based on the weather conditions, showcasing proficiency in **React Hooks** (`useState`, `useEffect`).
+- **Asynchronous Data Handling:** Implemented `async/await` patterns to manage API calls, ensuring a non-blocking UI during data retrieval.
+- **Responsive Design:** Fully optimized for mobile and desktop views using modern CSS techniques.
 
-## ✨ Destaques
-
-- 📱 **Mobile-First**: lista no mobile e cards em linha no desktop.
-- 📅 **Previsão estendida**: data em PT-BR, ícone e temperatura média.
-- 🌅 **Página de detalhes**: nascer/pôr do sol, umidade, vento e condição climática.
-- 🔍 **Busca por cidade** com atualização reativa dos componentes.
-- 🛠️ Arquitetura simples e escalável: serviços para API, componentes desacoplados e estilos modulares.
-
----
-
-## 🧰 Tecnologias
-
-- **React** (Vite)
-- **React Router**
-- **Axios**
-- **React Icons**
-- **CSS** com abordagem **Mobile-First**
+## 🛠 Tech Stack
+- **Frontend:** React.js
+- **Styling:** Styled Components / CSS Modules
+- **Data Source:** OpenWeatherMap API
+- **Deployment:** Vercel / Netlify
 
 ---
 
-## 🌐 API Utilizada
-
-O projeto **ClimaJá+** utiliza a [WeatherAPI](https://www.weatherapi.com/), uma API pública de dados meteorológicos que fornece informações em tempo real e previsões futuras.
-
-### 📌 Principais recursos utilizados
-- **Previsão de 5 dias**: temperaturas médias, condições climáticas e ícones.
-- **Dados astronômicos (astro)**: horários de nascer e pôr do sol.
-- **Localização**: nome da cidade e região pesquisada.
-- **Alertas climáticos**: Alertas de chuvas, ventos ou outros eventos quando disponíveis.
-
-### 📄 Formato de resposta
-A API retorna um objeto JSON com:
-- `location` → informações da cidade/região.
-- `current` → dados do clima atual.
-- `forecast.forecastday[]` → lista de dias com previsão, temperatura, condição e dados astronômicos.
-- `alerts` → lista de alertas (quando disponíveis).
-
-### 🔗 Endpoint principal
-```http
-GET https://api.weatherapi.com/v1/forecast.json
+## 💡 Engineering Insights
+This project demonstrates my ability to work with **Third-party Services** and transform raw JSON data into a meaningful user interface. Handling API keys securely and managing loading states are essential skills for any modern Frontend or Fullstack role.
 
 ---
 
-## ▶️ Como rodar localmente
+## 📦 Getting Started
 
-```bash
-# 1) Instale as dependências
-npm install
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/catmiih/ClimaJa.git
+   cd ClimaJa
+   ```
 
-# 2) Configure as variáveis de ambiente (ver seção abaixo)
+2. **Install dependencies:**
 
-# 3) Rode em modo desenvolvimento
-npm run dev
+    ```bash
+    npm install
+    ```
 
-# 4) Build de produção (opcional)
-npm run build
-npm run preview
+3. **Get your API Key: Sign up at OpenWeatherMap to get a free API key.**
+
+4. **Run the app:**
+    ```bash
+    npm start
+    ```
